@@ -42,7 +42,7 @@ const Navigation = () => {
                 Sign In
               </Button>
             </Link>
-            <Link to="/login">
+            <Link to="/product-info">
               <Button variant="hero" className="px-6">
                 Get Started
               </Button>
