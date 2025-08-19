@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart, User, Calendar, MessageSquare, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -35,13 +36,17 @@ const Navigation = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden sm:flex">
-              <User className="w-4 h-4 mr-2" />
-              Sign In
-            </Button>
-            <Button variant="hero" className="px-6">
-              Get Started
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" className="hidden sm:flex">
+                <User className="w-4 h-4 mr-2" />
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/login">
+              <Button variant="hero" className="px-6">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
