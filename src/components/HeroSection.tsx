@@ -4,12 +4,12 @@ import heroImage from "@/assets/hero-healthcare.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-healthcare-light-blue via-white to-healthcare-light-green" />
+      <div className="absolute inset-0 bg-gradient-to-br from-healthcare-light-blue via-background to-healthcare-light-green" />
       
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
@@ -18,14 +18,14 @@ const HeroSection = () => {
                 <span className="text-sm font-medium text-primary">HIPAA Compliant & Secure</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Modern Healthcare
                 <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Management
                 </span>
               </h1>
               
-              <p className="text-xl text-muted-foreground max-w-2xl">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
                 Streamline patient care with our comprehensive platform featuring appointment scheduling, 
                 medication tracking, secure messaging, and telemedicine capabilities.
               </p>
@@ -44,7 +44,7 @@ const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-8">
+            <div className="flex flex-wrap gap-6 sm:gap-8 pt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">10K+</div>
                 <div className="text-sm text-muted-foreground">Happy Patients</div>

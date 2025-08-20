@@ -41,12 +41,12 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-white rounded-full border border-primary/20">
-            <span className="text-sm font-medium text-primary">POWERFUL FEATURES</span>
+          <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+            <span className="text-lg font-semibold text-primary">POWERFUL FEATURES</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             Everything You Need for
