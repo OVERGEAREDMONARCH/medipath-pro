@@ -33,7 +33,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">About MediConnect</Badge>
+          <Badge variant="secondary" className="mb-4 text-lg px-6 py-2">About MediConnect</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Revolutionizing Healthcare Access
           </h2>
