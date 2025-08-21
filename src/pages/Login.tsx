@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Heart, Mail, Lock, User, Phone, Calendar } from "lucide-react";
+import { Heart, Mail, Lock, User, Phone, Calendar, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
@@ -57,7 +57,17 @@ const Login = () => {
 
       {/* Login Form */}
       <div className="container mx-auto px-6 py-12 flex items-center justify-center">
-        <Card className="w-full max-w-md shadow-elegant bg-card/95 backdrop-blur-sm border-border/20">
+        <div className="w-full max-w-md space-y-6">
+          {/* Back Button */}
+          <Link 
+            to="/" 
+            className="inline-flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span>Back to home</span>
+          </Link>
+          
+          <Card className="shadow-elegant bg-card/95 backdrop-blur-sm border-border/20">
           <CardHeader className="text-center space-y-4">
             <div className="mx-auto w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center">
               <Heart className="w-8 h-8 text-white" />
@@ -251,6 +261,7 @@ const Login = () => {
             </div>
           </CardContent>
         </Card>
+        </div>
       </div>
     </div>
   );
