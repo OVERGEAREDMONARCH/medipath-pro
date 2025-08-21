@@ -5,10 +5,10 @@ const CTASection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full" />
-        <div className="absolute bottom-20 right-20 w-48 h-48 border border-white rounded-full" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white rounded-full" />
+      <div className="absolute inset-0 opacity-20 dark:opacity-10">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-white/50 dark:border-white/30 rounded-full" />
+        <div className="absolute bottom-20 right-20 w-48 h-48 border border-white/50 dark:border-white/30 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white/50 dark:border-white/30 rounded-full" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
