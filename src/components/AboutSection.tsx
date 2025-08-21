@@ -76,7 +76,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="bg-card/70 backdrop-blur-sm rounded-xl p-6 border border-border/20">
               <h4 className="font-semibold text-lg mb-4">Our Mission</h4>
               <p className="text-muted-foreground">
                 "To democratize healthcare by creating seamless connections between patients and providers, 

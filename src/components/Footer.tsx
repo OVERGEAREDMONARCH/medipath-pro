@@ -37,10 +37,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><span className="text-white/80">Appointment Booking</span></li>
-              <li><span className="text-white/80">Telemedicine</span></li>
-              <li><span className="text-white/80">Medication Tracking</span></li>
-              <li><span className="text-white/80">Secure Messaging</span></li>
+              <li><a href="#features" className="text-white/80 hover:text-white transition-colors">Appointment Booking</a></li>
+              <li><a href="#features" className="text-white/80 hover:text-white transition-colors">Telemedicine</a></li>
+              <li><a href="#features" className="text-white/80 hover:text-white transition-colors">Medication Tracking</a></li>
+              <li><a href="#features" className="text-white/80 hover:text-white transition-colors">Secure Messaging</a></li>
             </ul>
           </div>
 
@@ -69,10 +69,10 @@ const Footer = () => {
           <p className="text-white/60 text-sm">
             © 2024 MediConnect. All rights reserved. HIPAA Compliant Healthcare Platform.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Security</a>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="/terms" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <a href="/security" className="text-white/60 hover:text-white text-sm transition-colors">Security</a>
           </div>
         </div>
       </div>

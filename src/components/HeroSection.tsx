@@ -13,7 +13,7 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-4 py-2 bg-white/80 rounded-full border border-primary/20">
+              <div className="inline-flex items-center px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-primary/20">
                 <Shield className="w-4 h-4 text-primary mr-2" />
                 <span className="text-sm font-medium text-primary">HIPAA Compliant & Secure</span>
               </div>
@@ -70,19 +70,19 @@ const HeroSection = () => {
               />
               
               {/* Floating cards */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="absolute top-6 left-6 bg-card/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border/20">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                     <Users className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">Live Consultation</div>
+                    <div className="text-sm font-semibold text-card-foreground">Live Consultation</div>
                     <div className="text-xs text-muted-foreground">Dr. Sarah Wilson</div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="absolute bottom-6 right-6 bg-card/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-border/20">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">98%</div>
                   <div className="text-xs text-muted-foreground">Patient Satisfaction</div>
