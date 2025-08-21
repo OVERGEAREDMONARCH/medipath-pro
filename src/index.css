@@ -109,6 +109,9 @@
     --border: 220 15% 20%;
     --input: 220 15% 15%;
     --ring: 210 100% 60%;
+    
+    /* Dark mode gradients */
+    --gradient-card: linear-gradient(145deg, hsl(220 15% 10%) 0%, hsl(220 15% 15%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -143,7 +146,7 @@
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
     @apply rounded-2xl p-8 transition-all duration-300 hover:shadow-[var(--shadow-feature)];
-    @apply hover:-translate-y-2;
+    @apply hover:-translate-y-2 border border-border/50;
   }
 
   /* Healthcare icon containers */
