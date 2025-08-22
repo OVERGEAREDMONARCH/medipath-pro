@@ -8,10 +8,10 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50 shadow-sm">
-      <div className="container mx-auto px-4 sm:px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+        <div className="flex items-center justify-between gap-4 sm:gap-6 lg:gap-8">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 min-w-0 flex-shrink-0">
             <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
               <Heart className="w-6 h-6 text-white" />
             </div>
@@ -22,7 +22,7 @@ const Navigation = () => {
           </div>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-center max-w-md mx-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
             </a>
@@ -38,7 +38,7 @@ const Navigation = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
             <ThemeToggle />
             
             {/* Desktop Sign In - shows on medium screens and up */}
