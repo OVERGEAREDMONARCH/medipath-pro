@@ -22,7 +22,7 @@ const Navigation = () => {
           </div>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
             </a>
@@ -38,26 +38,31 @@ const Navigation = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <ThemeToggle />
-            <Link to="/login" className="hidden sm:block">
-              <Button variant="ghost" size="sm">
+            
+            {/* Desktop Sign In - shows on medium screens and up */}
+            <Link to="/login" className="hidden md:block">
+              <Button variant="ghost" size="sm" className="px-3 sm:px-4">
                 <User className="w-4 h-4 mr-2" />
                 Sign In
               </Button>
             </Link>
+            
+            {/* Get Started Button - always visible but responsive padding */}
             <Link to="/product-info">
-              <Button className="px-4 sm:px-6">
+              <Button className="px-3 sm:px-4 md:px-6 text-sm sm:text-base">
                 Get Started
               </Button>
             </Link>
             
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - shows on medium screens and below */}
             <Button 
               variant="ghost" 
               size="sm" 
-              className="lg:hidden"
+              className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
               <Menu className="w-5 h-5" />
             </Button>
@@ -66,7 +71,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border bg-background/95 backdrop-blur-md rounded-b-lg">
+          <div className="md:hidden mt-4 pb-4 border-t border-border bg-background/95 backdrop-blur-md rounded-b-lg">
             <div className="flex flex-col space-y-2 pt-4">
               <a 
                 href="#home" 
@@ -96,7 +101,7 @@ const Navigation = () => {
               >
                 Contact
               </a>
-              <Link to="/login" className="sm:hidden pt-2 border-t border-border/20">
+              <Link to="/login" className="md:hidden pt-2 border-t border-border/20">
                 <Button variant="ghost" className="justify-start w-full mt-2">
                   <User className="w-4 h-4 mr-2" />
                   Sign In
