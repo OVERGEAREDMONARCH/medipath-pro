@@ -7,7 +7,7 @@ import { useState } from "react";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -66,38 +66,38 @@ const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border bg-background/95 backdrop-blur-md rounded-b-lg">
+            <div className="flex flex-col space-y-2 pt-4">
               <a 
                 href="#home" 
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                className="text-foreground hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a 
                 href="#features" 
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                className="text-foreground hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a 
                 href="#about" 
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                className="text-foreground hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a 
                 href="#contact" 
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                className="text-foreground hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </a>
-              <Link to="/login" className="sm:hidden">
-                <Button variant="ghost" className="justify-start w-full">
+              <Link to="/login" className="sm:hidden pt-2 border-t border-border/20">
+                <Button variant="ghost" className="justify-start w-full mt-2">
                   <User className="w-4 h-4 mr-2" />
                   Sign In
                 </Button>
