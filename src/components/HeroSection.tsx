@@ -18,7 +18,7 @@ const HeroSection = () => {
                 <span className="text-sm font-medium text-primary">HIPAA Compliant & Secure</span>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-foreground leading-relaxed">
                 Modern Healthcare
                 <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Management
