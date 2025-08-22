@@ -60,7 +60,7 @@ const Navigation = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              className="md:hidden p-2"
+              className="md:hidden p-2 ml-2 border border-border/20 hover:bg-muted/50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
