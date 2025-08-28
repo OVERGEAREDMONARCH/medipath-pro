@@ -5,16 +5,20 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Heart, Mail, Lock, User, Phone, Calendar, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const email = formData.get('email') as string;
     
     // Simulate login process
     setTimeout(() => {
@@ -23,12 +27,22 @@ const Login = () => {
         title: "Welcome back!",
         description: "You have successfully signed in.",
       });
+      
+      // Redirect based on email domain (mock logic)
+      if (email?.includes('doctor') || email?.includes('dr.') || email?.includes('provider')) {
+        navigate('/provider-dashboard');
+      } else {
+        navigate('/patient-dashboard');
+      }
     }, 2000);
   };
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const role = formData.get('role') as string;
     
     // Simulate signup process
     setTimeout(() => {
@@ -37,6 +51,13 @@ const Login = () => {
         title: "Account created!",
         description: "Welcome to MediConnect. Please verify your email.",
       });
+      
+      // Redirect based on selected role
+      if (role === 'doctor') {
+        navigate('/provider-dashboard');
+      } else {
+        navigate('/patient-dashboard');
+      }
     }, 2000);
   };
 
@@ -97,6 +118,7 @@ const Login = () => {
                       <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="doctor@mediclinic.com"
                         className="pl-10"
@@ -192,7 +214,8 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label htmlFor="role">Account Type</Label>
                     <select 
-                      id="role" 
+                      id="role"
+                      name="role"
                       className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       required
                     >

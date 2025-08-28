@@ -9,6 +9,8 @@ import Loader from "@/components/Loader";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import ProductInfo from "./pages/ProductInfo";
+import PatientDashboard from "./pages/PatientDashboard";
+import ProviderDashboard from "./pages/ProviderDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/login" element={<Login />} />
               <Route path="/product-info" element={<ProductInfo />} />
+              <Route path="/patient-dashboard" element={<PatientDashboard />} />
+              <Route path="/provider-dashboard" element={<ProviderDashboard />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
