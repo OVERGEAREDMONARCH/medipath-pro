@@ -38,7 +38,7 @@ const Navigation = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0">
             <ThemeToggle />
             
             {/* Desktop Sign In - shows on medium screens and up */}
@@ -49,9 +49,16 @@ const Navigation = () => {
               </Button>
             </Link>
             
+            {/* Mobile Sign In - shows only on mobile */}
+            <Link to="/login" className="md:hidden">
+              <Button variant="ghost" size="sm" className="p-2">
+                <User className="w-4 h-4" />
+              </Button>
+            </Link>
+            
             {/* Get Started Button - always visible but responsive padding */}
             <Link to="/product-info">
-              <Button className="px-3 sm:px-4 md:px-6 text-sm sm:text-base">
+              <Button className="px-2 sm:px-4 md:px-6 text-xs sm:text-sm md:text-base whitespace-nowrap">
                 Get Started
               </Button>
             </Link>
@@ -60,11 +67,11 @@ const Navigation = () => {
             <Button 
               variant="ghost" 
               size="sm" 
-              className="md:hidden p-2 ml-2 border border-border/20 hover:bg-muted/50"
+              className="md:hidden p-2 border border-border/20 hover:bg-muted/50 flex-shrink-0"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-4 h-4" />
             </Button>
           </div>
         </div>
